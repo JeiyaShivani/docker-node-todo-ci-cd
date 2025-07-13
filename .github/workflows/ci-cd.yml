@@ -28,6 +28,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            docker stop todo-container || true
-            docker rm todo-container || true
-            docker run -d --name todo-container -p 3000:3000 todo-api
+            sudo docker stop todo-container || true
+            sudo docker rm todo-container || true
+            sudo docker run -d --name todo-container -p 3000:3000 todo-api
